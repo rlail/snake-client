@@ -12,7 +12,7 @@ const setupInput = (conn) => {
 
 const handleUserInput = function (data) {
   if (data === '\u0003') {
-    // Check if Ctrl + C pressed
+    //If Ctrl + C pressed
     process.exit(); // Terminate the process
   } else if (data === 'w') { //WASD inputs
     connection.write("Move: up");
@@ -23,7 +23,11 @@ const handleUserInput = function (data) {
   } else if (data === 'd') {
     connection.write("Move: right");
   } else if (data === '1') {
-    connection.write("Say: Hello!"); // The Say Message
+    connection.write("Say: Hello!"); // Say Messages
+  } else if (data === '2') {
+    connection.write("Say: Good job!"); 
+  } else if (data === '3') {
+    connection.write("Say: Bye!"); 
   };
 };
 
